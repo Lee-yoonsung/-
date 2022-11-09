@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="test.css">
+
+</head>
+<style>html{
+
+    height:100%;
+
+}
+
+body{
+
+    margin: 0px;
+    height:100%;
+
+}
+
+.main{
+
+    height:100%;
+    width: 100%;
+
+}
+
+ 
+
+.d-none{
+
+    display: none;
+
+}
+
+ 
+
+.board{
+
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+
+}
+
+ 
+
+.table{
+
+    font-size :20px;
+    border-collapse: collapse;
+    width: 1200px;
+    margin-top:200px;
+    border: 1px solid gray;    
+    text-align: center;
+
+}
+
+.thead td {
+    background: #B2B2B2;
+
+}
+
+ 
+
+td{
+    height: 40px;
+    border-bottom:1px solid black;
+
+}
+
+ 
+
+tr td:nth-child(2){
+    width: 750px;
+}
+
+
+.page-nation li{ 
+    list-style: none;
+
+} 
+
+ 
+
+.page-wrap {
+    text-align:center;
+    font-size:0;
+ }
+
+.page-nation  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+
+ 
+
+.page-nation a {
+    display:block;
+    margin:0 3px;
+    float:left;
+    border:1px solid #e6e6e6;
+    width:28px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    background-color:#fff;
+    font-size:13px;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.page-nation a:hover{
+    background-color:gray;
+    color:white;
+
+}</style>
+<body>
+
+    <section class="main">
+
+        <h1 class="d-none">공지사항</h1>
+            <div class="board">
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <td>번호</td>
+                            <td>제목</td>
+                            <td>글쓴이</td>
+                            <td>작성일</td>
+                            <td>조회수</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td><a href="">이벤트 당첨</a></td>
+                            <td>커피 플랫폼</td>
+                            <td>2022-11-04</td>
+                            <td>1</td>
+                        </tr>
+                        <tbody class="tbody">
+
+                            <tr>
+                                <td>2</td>
+                                <td><a href="">2022.11.01 공지사항</a></td>
+                                <td>커피 플랫폼</td>
+                                <td>2022-11-01</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </tbody>
+                </table>
+                <div class="page-wrap">
+                    <ul class="page-nation">
+                        <li><a href="/board/list?p=1">1</a></li>
+                        <li><a href="/board/list?p=2">2</a></li>
+                        <li><a href="/board/list?p=3">3</a></li>
+                        <li><a href="/board/list?p=4">4</a></li>
+                        <li><a href="/board/list?p=5">5</a></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+</body>
+<footer>    <div class="footer_wrap" style="text-align: center;">
+    <br>
+    <div class="name_footer">(주)대표 : 이윤성</div>
+    <div class="address">47340 부산광역시 부산진구 엄광로 176 / TEL. 051-123-4567</div>
+    <div class="copyright">KOREA CAFE PLATFORM.</div></footer>
+</html>
