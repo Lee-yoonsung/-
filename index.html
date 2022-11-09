@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFE PLATFROM</title>
+    <script src="https://kit.fontawesome.com/b5f9029813.js" crossorigin="anonymous"></script>
+</head>
+<style>
+            .container-full {
+            width: 100%;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 2000px;
+            margin: 0px 40px;
+            box-sizing: border-box;
+        }
+        header{
+            min-height: 5px;
+            padding: 0px 100px 100px -1000px;
+        }
+        header a.logo {
+            float : left;
+        }
+        header a.logo img {
+            width: 90px;
+            margin: 35px 0px 0px 550px;
+        }
+        header ul {
+            list-style: none;
+            float: right;
+        }
+        header ul li {
+            display: inline-block;
+        }
+        header ul li a {
+            text-decoration: none;
+            color: #4b4b4b;
+            padding: 0px 10px;
+            margin: 0 10px;
+            width: 100px;
+        }
+        header ul li a:hover {
+            padding-bottom: 8px;
+            border-bottom: 3px solid #000000;
+            color: #000000;
+        }
+        .main-div {
+            width: 500px;
+            height: 40px;
+            padding: 10px;
+            align-items: center;
+            margin: 35px auto;
+        }
+        .search-form {
+            border: 2px solid black;
+            border-radius: 24px;
+            position: relative;
+            text-align: center;
+        }
+        .search-input {
+            width: all;
+            height: 40px;
+            font-size: 18px;
+            padding-left: 18px;
+            border: none;
+            border-radius: 20px;
+            font-family: "Noto Sans KR", "Helvetica Neue", "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", "돋움", dotum, sans-serif;
+        }
+        .search-input:focus ~ .search-history {
+            display: block;
+        }
+        .search-input:focus {
+            outline: none;
+        }
+        form {
+            color: rgb(0, 0, 0);
+            padding: 2px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            margin: 0 0 30px;
+        }
+
+        input[type=search] {
+            border: none;
+            background: transparent;
+            margin: 0;
+            padding: 7px 8px;
+            font-size: 14px;
+            color: inherit;
+            border: 1px solid transparent;
+            border-radius: inherit;
+        }
+
+        input[type=search]::placeholder {
+            color: #bbb;
+        }
+
+        button[type=submit] {
+            text-indent: -999px;
+            overflow: hidden;
+            width: 40px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid transparent;
+            border-radius: inherit;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        button[type=submit]:hover {
+            opacity: 1;
+        }
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #675a5a;
+}
+ul,li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.hidden {
+    display: none;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    /* background-color: #aaa; */
+}
+h1 {
+    float: left;
+    width: 200px;
+    height: 40px;
+    padding-top: 30px;
+}
+nav {
+    float: right;
+    width: 650px;
+    margin-top: 20px;
+}
+
+nav .gnb>li {
+    float: right;
+    width: 20%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+}
+nav .gnb>li>a {
+    font-size: 14pt;
+    line-height: 40px;
+    display: block;
+}
+nav .gnb>li>a:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+#slidewrap {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.sec2 article {
+    width: 33.3%;
+    height: 200px;
+    background-color: #ffffff;
+    float: left;
+}
+.arti1 .notice {
+    margin-top: 10px;
+}
+.arti1 .notice>p>a{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(228, 228, 228);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    font-size: 15pt;
+}
+.arti1 .notice .noticon {
+    position: relative;
+    width: 360px;
+    height: 150px;
+    padding: 10px;
+    padding-left: 0px;
+}
+.arti1 .notice .noticon a {
+    display: block;
+    font-size: 12pt;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+.arti1 .notice .noticon a:nth-child(even) {
+    background-color: rgb(193, 193, 193);;
+}
+.arti1 .notice .noticon a:hover{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+.arti2 .gallery {
+    margin-top: 10px;
+}
+.arti2 .gallery>p>a{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(228, 228, 228);
+    margin-left: 10px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    font-size: 14pt;
+}
+.arti2 .gallery .gallcon {
+    position: relative;
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 50px;
+}
+.arti2 .gallery .gallcon>img {
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+    margin-left: 15px;
+    float: right;
+}
+
+ /*상품 페이지*/
+ .normal_prd {
+    width: 100px;
+    margin: 0 ;
+    padding: 20px 0;
+}
+.viewtype.catal_ty {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.viewtype {
+    overflow: hidden;
+    position: relative;
+    width: 1260px;
+    margin: 0px 327px;
+}
+.viewtype.catal_ty ul li {
+    width: 399px;
+    padding: 10px 60px 20px 35px ;
+}
+.viewtype li .box_pd a {
+    text-decoration: none;
+}
+.viewtype.catal_ty li .box_pd .pname {
+    padding: 13px 10px 0;
+    text-align: left;
+}
+.viewtype li .box_pd:hover {
+    padding: 0;
+    border: 1px solid #000000;
+}
+.viewtype li .box_pd .pname p {
+    display: block;
+    height: 37px;
+    margin-right: -1px;
+    padding-right: 1px;
+    font-size: 18px;
+    color: #333;
+}
+.price_info {
+    padding: 27px 0 0;
+}
+.price_info .price_detail .sale_price {
+    margin-top: 21px;
+    font-size: 18px;
+    font-family: Tahoma, sans-serif;
+    color: #111;
+}
+.viewtype li .box_pd img {
+    width: 299px;
+}
+element.style {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+.footer_wrap {
+    position: relative;
+    width: 1000px;
+    margin-bottom: 20px;
+    margin-left: 450px;
+}
+.footer_wrap .address {
+    height: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.footer_wrap .copyright {
+    height: 20px;
+    font-size: 12px;
+    padding-top: 2px;
+    color: #999;
+}
+dd {
+    display: block;
+    margin-inline-start: 60px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ul, ol, li {
+    list-style: none;
+    display : inline-block;
+}
+li {
+    text-align: left;
+}
+</style>
+<body>
+    <div class="container-full">
+        <div class="container">
+            <header>
+                <a href="#" class="logo">
+                    <img src="로고.png" alt="로고">
+                </a>
+                <ul>
+                    <li>
+                        <a href="로그인.html">로그인</a>
+                    </li>
+                    <li>
+                        <a href="로그인.html">공지사항</a>
+                    </li>
+                    
+                </ul>
+            </header>
+        </div>
+    </div>
+    <div class="main-div">
+        <form action="" class="search-form">
+            <input type="search" class="search-input" value="" placeholder="검색어를 입력하시오" size="50">
+            <button type="submit">searchs</button>
+        </form>
+    </div>
+
+    <div id="wrap">
+        <header class="header clearfix">
+            <nav>
+                <ul class="gnb clearfix">
+                    <li><a href="https://www.caffe-pascucci.co.kr/product/productList.asp?typeCode=00100010">파스쿠찌</a></li>
+                    <li><a href="https://www.instagram.com/sheepcoffee_official/">쉽 커피</a></li>
+                    <li><a href="https://www.ediya.com/contents/menu_intro.html">이디야</a></li>
+                    <li><a href="https://www.starbucks.co.kr/menu/drink_list.do">스타벅스</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        </div>
+
+        <div style="text-align : center;">
+            <img src="http://ssohshop.cafe24.com/web/upload/NNEditor/20170130/copy(1485778710)-coffee-bean-growing-belt.png" width="1300" height="500">
+        </div>
+
+        <div class="no_result" style="display:none;"></div>
+    </div>
+    <div class="normal_prd">
+        <div class="viewtype catal_ty">
+            <ul class="cfix">
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002487]_20210426091745467.jpg">
+                            </div>
+                            <div class="pname">
+                                <p>STARBUSKS <P>나이트로 바닐라 크림</P></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">5,800원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg">
+                            </div>
+                            <div class="pname">
+                                <p>STARBUSKS <P>바닐라 크림 콜드 브루</P></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">5800원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[30]_20210415144252244.jpg">
+                            </div>
+                            <div class="pname">
+                                <p>STARBUSKS <P>에스프레소 콘 파나</P></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">6,300원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://www.ediya.com/files/menu/IMG_1661754006557.png">
+                            </div>
+                            <div class="pname">
+                                <p>EDIYA<p>ICED 애플 루이보스티</p></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">4,500원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://www.ediya.com/files/menu/IMG_1661754291671.png">
+                            </div>
+                            <div class="pname">
+                                <p>EDIYA<p>ICED 연유 밀크티</p></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">4,000원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li id="thisClick_3629079667">
+                    <div class="box_pd">
+                        <a href="#">
+                            <div class="img_plot">
+                                <img src="https://www.caffe-pascucci.co.kr/upload/product/%EC%97%90%EC%8A%A4%ED%94%84%EB%A0%88%EC%86%8C%EB%8F%84%ED%94%BC%EC%98%A4_161018.jpg">
+                            </div>
+                            <div class="pname">
+                                <p>PASCUCCI<p>에스프레소 도피오</p></p>
+                                <div class="price_info cfix">
+                                    <span class="price_detail">
+                                        <strong class="sale_price">3,600원</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_wrap" style="text-align: center;">
+        <br>
+        <i class="fa-brands fa-instagram"></i>
+        <div class="name_footer">(주)대표 : 이윤성</div>
+        <div class="address">47340 부산광역시 부산진구 엄광로 176 / TEL. 051-123-4567</div>
+        <div class="copyright">KOREA'S BEST PLATFORM.</div>
+    </div>
+</body>
+</html>
